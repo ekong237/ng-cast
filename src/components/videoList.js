@@ -1,7 +1,10 @@
 angular.module('video-player')
 .component('videoList', {
+  bindings: {
+    videos: '<',
+    clickVideo: '<'
+  },
   controller: function() {
-    this.videos = exampleVideoData;
   },
   templateUrl: 'src/templates/videoList.html'
 });
