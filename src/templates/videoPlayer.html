@@ -1,7 +1,7 @@
 <div class="video-player">
-  <div class="embed-responsive embed-responsive-16by9" ng-switch="$ctrl.video">
-  <div ng-switch-when="null">Please wait</div>
-    <iframe class="embed-responsive-item" ng-switch-default ng-src={{"https://www.youtube.com/embed/"+$ctrl.video.id.videoId}} allowFullScreen></iframe>
+  <div class="embed-responsive embed-responsive-16by9">
+  <div ng-if="$ctrl.video === null">Please wait</div>
+    <iframe class="embed-responsive-item" ng-if="$ctrl.video !== null" ng-src={{"https://www.youtube.com/embed/"+$ctrl.video.id.videoId}} allowFullScreen></iframe>
     
   </div>
   <div class="video-player-details">

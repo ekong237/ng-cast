@@ -3,15 +3,15 @@ angular.module('video-player')
   bindings: {
   },
   controller: function() {
-    this.selectVideo = (i) => {
-      
-      this.currentVideo = exampleVideoData[i];
-      
-      console.log('selectVideo!!!!!!!', i);
-    };
-    this.searchResults = function() {};
-    this.currentVideo = null;
     this.videos = exampleVideoData;
+    this.selectVideo = (i) => {
+      this.currentVideo = this.videos[i];
+    };
+    this.searchResults = (resultVideo) => {
+      this.videos = resultVideo;
+      //console.log(this.videos, resultVideo);
+    };
+    this.currentVideo = this.videos[0];
   },
   templateUrl: 'src/templates/app.html'
 });
