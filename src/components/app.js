@@ -4,11 +4,13 @@ angular.module('video-player')
   },
   controller: function() {
     this.selectVideo = (i) => {
+      
       this.currentVideo = exampleVideoData[i];
+      
       console.log('selectVideo!!!!!!!', i);
     };
     this.searchResults = function() {};
-    this.currentVideo = exampleVideoData[0];
+    this.currentVideo = null;
     this.videos = exampleVideoData;
   },
   templateUrl: 'src/templates/app.html'

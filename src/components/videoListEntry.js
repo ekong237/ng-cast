@@ -1,7 +1,7 @@
 angular.module('video-player')
 .component('videoListEntry', {
   bindings: {
-    item: '<'
+    video: '<'
   },
   controller: function() {
     
